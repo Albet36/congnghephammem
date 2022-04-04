@@ -1,0 +1,146 @@
+
+              
+            <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Thông tin cá nhân của nhân viên</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Thông tin cá nhân của nhân viên</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+           <div class="col-lg-12">
+              <style>
+                body {
+                background: rgb(99, 39, 120)
+                }
+
+                .form-control:focus {
+                box-shadow: none;
+                border-color: #BA68C8
+                }
+
+                .profile-button {
+                background: rgb(99, 39, 120);
+                box-shadow: none;
+                border: none
+                }
+
+                .profile-button:hover {
+                background: #682773
+                }
+
+                .profile-button:focus {
+                background: #682773;
+                box-shadow: none
+                }
+
+                .profile-button:active {
+                background: #682773;
+                box-shadow: none
+                }
+
+                .back:hover {
+                color: #682773;
+                cursor: pointer
+                }
+
+                .labels {
+                font-size: 11px
+                }
+
+                .add-experience:hover {
+                background: #BA68C8;
+                color: #fff;
+                cursor: pointer;
+                border: solid 1px #BA68C8
+                }
+              </style>
+              <div class="container rounded bg-white mt-5 mb-5">
+                <div class="row">
+                  <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img
+                        class="rounded-circle mt-5" width="150px"
+                        src="{{staffItem.imagesEmployee}}"><span
+                        class="font-weight-bold">{{staffItem.nameEmployee}}</span><span
+                        class="text-black-50">{{staffItem.emailEmployee}}</span><span> </span></div>
+                  </div>
+                  <div class="col-md-5 border-right">
+                      <form action="/employee/{{staffItem._id}}?_method=PUT" method="post">
+                    <div class="p-3 py-5">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text"
+                            class="form-control" value="{{staffItem.nameEmployee}}" placeholder="" name="nameEmployee"></div>
+                        <div class="col-md-6"><label class="labels">Images Employee</label><input type="text" class="form-control"
+                            placeholder="first name" value="{{staffItem.imagesEmployee}}" name="imagesEmployee"></div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Age</label><input type="text"
+                            class="form-control" placeholder="enter phone number" value="{{staffItem.ageEmployee}}" name="ageEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Address</label><input type="text"
+                            class="form-control" placeholder="enter address line 1" value="{{staffItem.addressEmployee}}" name="addressEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Gender</label><input type="text"
+                            class="form-control" placeholder="enter address line 2" value="{{staffItem.genderEmployee}}" name="genderEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Phone</label><input type="text"
+                            class="form-control" placeholder="enter address line 2" value="{{staffItem.phoneEmployee}}" name="phoneEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Github</label><input type="text"
+                            class="form-control" placeholder="enter address line 2" value="{{staffItem.githubEmployee}}" name="githubEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Position</label><input type="text" class="form-control"
+                            placeholder="enter address line 2" value="{{staffItem.positionEmployee}}" name="positionEmployee"></div>
+                        <div class="col-md-12"><label class="labels">Birthday</label><input type="text"
+                            class="form-control" placeholder="education" value="{{staffItem.birthdayEmployee}}" name="birthdayEmployee"></div>
+                             <div class="col-md-12"><label class="labels">Status</label><input type="text"
+                            class="form-control" placeholder="education" value="{{staffItem.status}}" name="status"></div>
+                           
+                              </div>
+                 
+                      <div class="mt-5 text-center">
+                        <button class="btn btn-primary profile-button">Save
+                          Profile</button>
+                          
+                            
+                          </div>
+                         
+                    </div>
+                    </form>
+                  </div>
+                 
+                  <div class="col-md-4">
+                    <div class="p-3 py-5">
+                      
+                     <div class="col-md-12"><label class="labels">CreateAt</label><p>{{staffItem.createdAt}}</p></div> <br>
+                       <div class="col-md-12"><label class="labels">UpdateAt</label><p>{{staffItem.updatedAt}}</p></div>
+                    <form  action="/employee/{{staffItem._id}}?_method=DELETE" class="m-1" method="POST" role="form">
+                              
+                              <button class="btn btn-primary">Delete</button>
+                              
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+     
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>

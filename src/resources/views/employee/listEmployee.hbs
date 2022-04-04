@@ -1,0 +1,142 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Bảng Nhân Viên</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Bảng Nhân Viên</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+                   <div class="col-lg-12">
+              <!-- general form elements -->
+              <div class="card-header">
+                <h3 class="card-title">Bordered Table</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example"
+                  style="margin: 0 0 25px 0; width: 100%;">
+                  <a href="/employee" class="btn btn-info"
+                    style=" margin: 0 18px 0 0; float: left; border-radius: 8px;">Thông Tin</a>
+                  <a href="/employee/time-keeping" class="btn btn-warning"
+                    style=" margin: 0 18px; float: left; border-radius: 8px;">Chấm Công</a>
+                  <a href="/employee/money" class="btn btn-danger"
+                    style=" margin: 0 18px; float: left; border-radius: 8px;">Lương</a>
+                  
+                </div>
+                     <div class="row">
+                  <div class="col-lg-3">
+                  <div class="form-group">
+                  
+                      <select name="" id="input" class="form-control" required="required">
+                        <option value=""></option>
+                      </select>
+                  
+                  </div>
+                  </div>
+                   <div class="col-lg-3">
+                  <div class="form-group">
+                 
+                      <select name="" id="input" class="form-control" required="required">
+                        <option value=""></option>
+                      </select>
+               
+                  </div>
+                  </div>
+                  <div class="col-lg-5">
+                    
+                    <div class="form-group">
+                   
+                  
+                          <input type="search" name="" id="input" class="form-control" value="" required="required" title="">
+                         
+                       </div>
+                     
+                  </div>
+                <div class="col-lg-1">
+                   <button type="button" class="btn btn-large btn-block btn-default">Search</button>
+                </div>
+                    
+                 
+                    
+                
+                </div>
+             
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="text-align: center;">ID Staff</th>
+                      <th style="text-align: center;">Avatar Staff</th>
+                      <th style="text-align: center;">Staff's Name</th>
+                      <th style="text-align: center;">Staff Age</th>
+                      <th style="text-align: center;">Staff Address</th>
+                      <th style="text-align: center;">Staff Sex</th>
+                      <th style="text-align: center;">Phone Number</th>
+                      <th style="text-align: center;">Email</th>
+                      <th style="text-align: center;">Github</th>
+                      <th style="text-align: center;">Position</th>   
+                      <th style="text-align: center;">Status</th>
+                      <th style="text-align: center;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each list}}
+                    <tr>
+                      <td>{{this.idEmployee}}</td>
+                      <td>
+                      <img src="{{this.imagesEmployee}}" class="img-responsive" style="width: 100px; height:100px" alt="Image">
+                      </td>
+                      <td>{{this.nameEmployee}}</td>
+                      <td>{{this.ageEmployee}}</td>
+                      <td>{{this.addressEmployee}}</td>
+                      <td><span class="badge bg-primary">{{this.genderEmployee}}</span></td>
+                      <td>{{this.phoneEmployee}}</td>
+                      <td>{{this.emailEmployee}}</td>
+                      <td>{{this.githubEmployee}}</td>
+                      <td>{{this.positionEmployee}}</td>
+                      <td><span class="badge bg-primary">{{this.status}}</span></td>
+                      <td>
+                        <form action="/employee/staff-details/{{this._id}}" class="m-1" method="POST" role="form">
+                              
+                              <button class="btn btn-primary">Views</button>
+                            </form>            
+                              
+                        </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+     
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
