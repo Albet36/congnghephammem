@@ -6,5 +6,6 @@ function api(app) {
     app.delete("/employee/:id",Api.deleteEmployee);
     app.post("/account",authLogin.checkAcc);
     app.post("/register",authLogin.register);
+   
 }
 module.exports = api;

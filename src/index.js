@@ -4,10 +4,11 @@ const path = require("path");
 const port = process.env.PORT || 1100;
 const { engine } = require("express-handlebars");
 const routes = require("./routes/routes");
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const methodOverride = require("method-override");
 const db = require("./database/database");
 const api = require("./app/api/api");
+
 app.use(cookieParser());
 require('dotenv').config()
 app.use(express.urlencoded({extended: true}));

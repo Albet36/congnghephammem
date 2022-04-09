@@ -5,6 +5,7 @@ module.exports.requireAuth = function (req,res,next) {
        res.redirect("/login");
        return;
     }
+ 
     const user =  account.findOne({id: req.cookies.userId});
     if(!user){
         res.redirect("/login");
